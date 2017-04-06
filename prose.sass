@@ -1,0 +1,61 @@
+$footnotemark-color: #f00
+
+=prose($font-size, $line-height)
+	text-align: justify
+	font-size: $font-size
+	line-height: $line-height
+	p
+		&:first-of-type
+			text-indent: 0
+		text-indent: 2em
+	h1
+		font-size: $font-size * (16/11)
+		text-align: center
+		letter-spacing: 0.1em
+		font-style: italic
+	author
+		text-align: center
+		display: block
+		font-size: $font-size - 1pt
+	date
+		text-align: center
+		display: block
+		font-size: $font-size - 1pt
+	footnoteseparator
+		height: 1px
+		width: 12em
+		border-top: 2px solid #555
+		display: inline-block
+	footnotemark
+		font-style: normal
+		color: $footnotemark-color
+		user-select: none
+		a
+			color: inherit
+			text-decoration: inherit
+		a:hover
+			color: #fff
+			background-color: #555
+	em
+		font-style: italic
+	incipit
+		+small-caps
+	acronym
+		+small-caps
+		text-transform: lowercase
+		letter-spacing: 0.1em
+	footnotes
+		font-size: $font-size - 1pt
+		line-height: $line-height * (($font-size - 1pt) / $font-size)
+		display: block
+		footnote
+			display: block
+			footnotemark
+				width: 2em
+				display: inline-block
+				text-align: right
+				padding-right: 0.25em
+			p
+				text-indent: 2em !important
+			p:first-of-type
+				text-indent: 0 !important
